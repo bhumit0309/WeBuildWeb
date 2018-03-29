@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Login | Bhumit, Parth, Mayank</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<script type="text/javascript">
+			var count = 3;
+			function validate()
+			{
+			var uname=document.getElementById("username").value;
+			var pwd=document.getElementById("password").value;
+			
+			if(uname=="admin" && pwd=="Admin@123")
+			{
+				window.location.replace("welcome.html");
+			}
+			else
+			{
+				alert("Invalid username or password. Please try again!");
+				count= count - 1;
+			}
+			if(count<=0)
+			{
+				document.getElementById("submit_button").disabled = true;
+			}
+			}
+		</script>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">WeBuildWeb</a> by Bhumit Patel</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<section id="main" class="container 75%">
+					<header>
+						<h2>Login</h2>
+					</header>
+					<div class="box">
+						<form method="post" name="f1">
+							<div class="row uniform 50%">
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="username" id="username" value="" placeholder="Username" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="password" name="password" id="password" value="" placeholder="Password" />
+								</div>
+							</div>
+							<div class="row uniform">
+								<div class="12u">
+									<ul class="actions align-center">
+										<li><input type="button" id="submit_button" value="Login" onClick="validate()" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.facebook.com/bhumit0309" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/bhumit0309" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://plus.google.com/+BhumitPatel0309" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; WeBuildWeb. All rights reserved.</li><li>Designed and Developed by: <a href="https://about.me/bhumit0309">Patels</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
